@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Coding Quiz</h1>
+            <p>Test your coding knowledge!</p>
+        </div>
+        <div class="header-right">
+            <button id="highScores">High Scores</button>
+            <span id="countDown">Time: <span id="timer">90</span> secs</span>
+            <span id="penalty">-10 secs</span>
+        </div>
+    </header>
+    
+    <main>
+        <section id="quiz">
+            <h2 id="question">Question Text</h2>
+            <div id="choices">
+                <button id="choice1">Choice 1</button>
+                <button id="choice2">Choice 2</button>
+                <button id="choice3">Choice 3</button>
+                <button id="choice4">Choice 4</button>
+            </div>
+        </section>
+
+        <section id="outcome">
+            <p id="outcome-text"></p>
+        </section>
+
+        <section id="submitScore">
+            <h2>Quiz Completed!</h2>
+            <p>Your Score: <span id="score">0</span></p>
+            <label for="initials">Enter your initials: </label>
+            <input type="text" id="initials" placeholder="Your initials">
+            <button id="submit">Submit</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Coding Quiz</p>
+            <p>Made with ❤️ by Jonathan</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
