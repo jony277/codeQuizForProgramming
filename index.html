@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
+    <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="header-left">
-            <h1>Coding Quiz</h1>
-            <p>Test your coding knowledge!</p>
+    <div class="score-container">
+        <h3 id="highScores">View Highscores</h3>
+        <h3 id="timer">Time: 75</h3>
+    </div>
+
+    <div id="whole-thing">
+        <div class="firstPage">
+            <h1 id="firstPrompt">Coding Quiz Challenge</h1>
+            <h2 id="subheader">
+                Try to answer the following code-related questions within the time limit.
+                Keep in mind that incorrect answers will penalize your score time by ten seconds!
+            </h2>
+            <button id="startbtn">Start Quiz</button>
         </div>
-        <div class="header-right">
-            <button id="highScores">High Scores</button>
-            <span id="countDown">Time: <span id="timer">90</span> secs</span>
-            <span id="penalty">-10 secs</span>
-        </div>
-    </header>
-    
-    <main>
-        <section id="quiz">
-            <h2 id="question">Question Text</h2>
-            <div id="choices">
-                <button id="choice1">Choice 1</button>
-                <button id="choice2">Choice 2</button>
-                <button id="choice3">Choice 3</button>
-                <button id="choice4">Choice 4</button>
+
+        <div class="quiz hide">
+            <h2 class="question-title"></h2>
+            <div class="answer-choices">
+                <button class="choice" data-index="0"></button>
+                <button class="choice" data-index="1"></button>
+                <button class="choice" data-index="2"></button>
+                <button class="choice" data-index="3"></button>
             </div>
-        </section>
-
-        <section id="outcome">
-            <p id="outcome-text"></p>
-        </section>
-
-        <section id="submitScore">
-            <h2>Quiz Completed!</h2>
-            <p>Your Score: <span id="score">0</span></p>
-            <label for="initials">Enter your initials: </label>
-            <input type="text" id="initials" placeholder="Your initials">
-            <button id="submit">Submit</button>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2023 Coding Quiz</p>
-            <p>Made with ❤️ by Jonathan</p>
+            <h2 class="correct hide">Correct!</h2>
+            <h2 class="wrong hide">Wrong!</h2>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="all-done-container hide" id="alldone">
+            <h2>All Done!</h2>
+            <h3>Your Score is: <span class="final-score"></span></h3>
+            <input class="name-input" placeholder="Enter Initials">
+            <button class="submit-button">Submit</button>
+        </div>
+    </div>
+
+    <div class="view-highscore-container hide" id="viewhighscore">
+        <h2>High Scores</h2>
+        <h5></h5>
+        <button class="goback-button">Re-Start Quiz</button>
+        <button class="clearhighscore-button">Clear high scores</button>
+    </div>
+
+    <script src="./assets/JS/index.js"></script>
 </body>
+
 </html>
